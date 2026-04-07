@@ -2,9 +2,12 @@ import time_var
 import pandas as pd
 import numpy as np
 
+# DATA
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+
+# MACROS and FUNCTIONS
 
 def get_filters():
     """
@@ -118,6 +121,7 @@ def user_stats(data_frame):
     print('-'*40)
 
 
+# MAIN
 def main():
     while True:
         city, month, day = get_filters()
@@ -132,6 +136,6 @@ def main():
         if restart.lower() != 'yes':
             break
 
-
+# DEFAULT
 if __name__ == "__main__":
 	main()
