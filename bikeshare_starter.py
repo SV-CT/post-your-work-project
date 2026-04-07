@@ -1,10 +1,13 @@
-import time
+import time_var
 import pandas as pd
 import numpy as np
 
+# DATA
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+
+# MACROS and FUNCTIONS
 
 def get_filters():
     """
@@ -42,14 +45,14 @@ def load_data(city, month, day):
     """
 
 
-    return df
+    return data_frame
 
 
-def time_stats(df):
+def time_stats(data_frame):
     """Displays statistics on the most frequent times of travel."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
-    start_time = time.time()
+    start_time = time_var.time()
 
     # display the most common month
 
@@ -60,15 +63,15 @@ def time_stats(df):
     # display the most common start hour
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took %s seconds." % (time_var.time() - start_time))
     print('-'*40)
 
 
-def station_stats(df):
+def station_stats(data_frame):
     """Displays statistics on the most popular stations and trip."""
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
-    start_time = time.time()
+    start_time = time_var.time()
 
     # display most commonly used start station
 
@@ -79,15 +82,15 @@ def station_stats(df):
     # display most frequent combination of start station and end station trip
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took %s seconds." % (time_var.time() - start_time))
     print('-'*40)
 
 
-def trip_duration_stats(df):
+def trip_duration_stats(data_frame):
     """Displays statistics on the total and average trip duration."""
 
     print('\nCalculating Trip Duration...\n')
-    start_time = time.time()
+    start_time = time_var.time()
 
     # display total travel time
 
@@ -95,15 +98,15 @@ def trip_duration_stats(df):
     # display mean travel time
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took %s seconds." % (time_var.time() - start_time))
     print('-'*40)
 
 
-def user_stats(df):
+def user_stats(data_frame):
     """Displays statistics on bikeshare users."""
 
     print('\nCalculating User Stats...\n')
-    start_time = time.time()
+    start_time = time_var.time()
 
     # Display counts of user types
 
@@ -114,24 +117,25 @@ def user_stats(df):
     # Display earliest, most recent, and most common year of birth
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took %s seconds." % (time_var.time() - start_time))
     print('-'*40)
 
 
+# MAIN
 def main():
     while True:
         city, month, day = get_filters()
-        df = load_data(city, month, day)
+        data_frame = load_data(city, month, day)
 
-        time_stats(df)
-        station_stats(df)
-        trip_duration_stats(df)
-        user_stats(df)
+        time_stats(data_frame)
+        station_stats(data_frame)
+        trip_duration_stats(data_frame)
+        user_stats(data_frame)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
 
-
+# DEFAULT
 if __name__ == "__main__":
 	main()
