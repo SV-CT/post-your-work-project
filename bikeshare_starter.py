@@ -42,10 +42,10 @@ def load_data(city, month, day):
     """
 
 
-    return df
+    return data_frame
 
 
-def time_stats(df):
+def time_stats(data_frame):
     """Displays statistics on the most frequent times of travel."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
@@ -64,7 +64,7 @@ def time_stats(df):
     print('-'*40)
 
 
-def station_stats(df):
+def station_stats(data_frame):
     """Displays statistics on the most popular stations and trip."""
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
@@ -83,7 +83,7 @@ def station_stats(df):
     print('-'*40)
 
 
-def trip_duration_stats(df):
+def trip_duration_stats(data_frame):
     """Displays statistics on the total and average trip duration."""
 
     print('\nCalculating Trip Duration...\n')
@@ -99,7 +99,7 @@ def trip_duration_stats(df):
     print('-'*40)
 
 
-def user_stats(df):
+def user_stats(data_frame):
     """Displays statistics on bikeshare users."""
 
     print('\nCalculating User Stats...\n')
@@ -121,12 +121,12 @@ def user_stats(df):
 def main():
     while True:
         city, month, day = get_filters()
-        df = load_data(city, month, day)
+        data_frame = load_data(city, month, day)
 
-        time_stats(df)
-        station_stats(df)
-        trip_duration_stats(df)
-        user_stats(df)
+        time_stats(data_frame)
+        station_stats(data_frame)
+        trip_duration_stats(data_frame)
+        user_stats(data_frame)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
