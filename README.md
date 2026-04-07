@@ -3,25 +3,24 @@
 
 # Project Title
 
-Describe what your project is about and what it does
+Data-based analysis and statistics of bike share systems
 
 ## Information about how to use your project
 
-This could include:
+- Clone the Project to a local repo
+- Add a new .csv file or update existing .csv file with the relevant data
+- Update bikeshare_starter.py to consider the new or updated .csv files, if applicable
+- Execute the bikeshare_starter.py for analysis and statistics
 
-- Step-by-step instructions for installing or setting up your project.
-- Any software dependencies that need to be installed.
-- Instructions and examples for how to use your project, including any helpful code snippets.
-- Common issues and troubleshooting tips
 
 ## Contribution guidelines
 
-If you welcome contributions, provide guidelines on how others can contribute to your project.
+Not Applicable.
 
 ## Credits
 
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+This project is forked from https://github.com/udacity/post-your-work-project.
 
 ## Date created
 
-Include the date you created this project and README file.
+7th April 2026.
